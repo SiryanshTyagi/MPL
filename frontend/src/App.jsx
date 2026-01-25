@@ -15,6 +15,9 @@ function App() {
           <Button color="inherit" component={Link} to="/">
             Register
           </Button>
+          <Button color="inherit" component={Link} to="/MPL/List-private">
+            Players
+          </Button>
         </Toolbar>
       </AppBar>
 
