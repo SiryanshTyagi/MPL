@@ -148,10 +148,10 @@ function getFileUrl(file) {
 // 1. Dynamic CORS: Once deployed, replace '*' with your actual frontend URL
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:5173",
+    origin: "https://mpl-eta.vercel.app", // Use your EXACT current Vercel URL
     methods: ["GET", "POST"],
     credentials: true,
-  })
+  }),
 );
 app.use(express.json());
 
@@ -218,7 +218,7 @@ app.post(
         .status(500)
         .json({ message: "Error saving registration", error: err.message });
     }
-  }
+  },
 );
 
 app.get("/mpl/players", async (req, res) => {
